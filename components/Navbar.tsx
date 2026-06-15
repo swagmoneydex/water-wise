@@ -20,19 +20,14 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <path
-              d="M14 3C14 3 6 11 6 17a8 8 0 0016 0c0-6-8-14-8-14z"
-              fill="#0077b6"
+        <a href="/" className="flex items-center">
+          {/* White glass pill behind logo when over dark video */}
+          <span className={`flex items-center rounded-lg transition-all duration-500 ${scrolled ? "" : "bg-white/90 backdrop-blur-sm px-2 py-1"}`}>
+            <img
+              src="/waterwise_logo1.png"
+              alt="Water-Wise"
+              className="h-8 w-auto"
             />
-            <path
-              d="M14 10C14 10 9 15.5 9 19a5 5 0 0010 0c0-3.5-5-9-5-9z"
-              fill="#48cae4"
-            />
-          </svg>
-          <span className="font-bold text-base tracking-tight" style={{ color: scrolled ? "var(--text)" : "#ffffff" }}>
-            Water-<span style={{ color: scrolled ? "var(--blue-deep)" : "#48cae4" }}>Wise</span>
           </span>
         </a>
 

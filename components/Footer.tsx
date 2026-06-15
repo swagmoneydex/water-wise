@@ -5,12 +5,12 @@ export default function Footer() {
         <div className="grid sm:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
-                <path d="M14 3C14 3 6 11 6 17a8 8 0 0016 0c0-6-8-14-8-14z" fill="#0096c7" />
-                <path d="M14 10C14 10 9 15.5 9 19a5 5 0 0010 0c0-3.5-5-9-5-9z" fill="#48cae4" />
-              </svg>
-              <span className="font-bold text-sm">Water-Wise</span>
+            <div className="mb-3">
+              <img
+                src="/waterwise_logo1.png"
+                alt="Water-Wise"
+                className="h-8 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-xs leading-relaxed text-[#7a96b0]">
               The clear choice for water sampling on Prince Edward Island.
