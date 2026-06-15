@@ -16,6 +16,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
+      style={{ color: scrolled ? "var(--text)" : "#ffffff" }}
     >
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -30,16 +31,16 @@ export default function Navbar() {
               fill="#48cae4"
             />
           </svg>
-          <span className="font-bold text-base tracking-tight" style={{ color: "var(--text)" }}>
-            Water-<span style={{ color: "var(--blue-deep)" }}>Wise</span>
+          <span className="font-bold text-base tracking-tight" style={{ color: scrolled ? "var(--text)" : "#ffffff" }}>
+            Water-<span style={{ color: scrolled ? "var(--blue-deep)" : "#48cae4" }}>Wise</span>
           </span>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: "var(--text-muted)" }}>
-          <a href="#services" className="hover:text-[#0077b6] transition-colors">Services</a>
-          <a href="#how-it-works" className="hover:text-[#0077b6] transition-colors">How It Works</a>
-          <a href="#faq" className="hover:text-[#0077b6] transition-colors">FAQ</a>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: scrolled ? "var(--text-muted)" : "rgba(255,255,255,0.8)" }}>
+          <a href="#services" className="hover:text-[#0077b6] transition-colors" style={{ color: "inherit" }}>Services</a>
+          <a href="#how-it-works" className="hover:text-[#0077b6] transition-colors" style={{ color: "inherit" }}>How It Works</a>
+          <a href="#faq" className="hover:text-[#0077b6] transition-colors" style={{ color: "inherit" }}>FAQ</a>
         </nav>
 
         <a
@@ -59,9 +60,9 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <div className="w-5 flex flex-col gap-1.5">
-            <span className={`block h-0.5 bg-[#0d1b2a] transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block h-0.5 bg-[#0d1b2a] transition-all ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 bg-[#0d1b2a] transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span className={`block h-0.5 transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} style={{ background: scrolled ? "#0d1b2a" : "#ffffff" }} />
+            <span className={`block h-0.5 transition-all ${menuOpen ? "opacity-0" : ""}`} style={{ background: scrolled ? "#0d1b2a" : "#ffffff" }} />
+            <span className={`block h-0.5 transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} style={{ background: scrolled ? "#0d1b2a" : "#ffffff" }} />
           </div>
         </button>
       </div>
