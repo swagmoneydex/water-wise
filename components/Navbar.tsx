@@ -21,14 +21,29 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center">
-          {/* White glass pill behind logo when over dark video */}
-          <span className={`flex items-center rounded-lg transition-all duration-500 ${scrolled ? "" : "bg-white/90 backdrop-blur-sm px-2 py-1"}`}>
-            <img
-              src="/waterwise_logo1.png"
-              alt="Water-Wise"
-              className="h-8 w-auto"
-            />
-          </span>
+          {scrolled ? (
+            /* Scrolled: all-blue styled logo */
+            <span className="flex items-center gap-2">
+              <svg width="30" height="28" viewBox="0 0 30 28" fill="none">
+                {/* House */}
+                <path d="M15 1L1 12h4v15h20V12h4L15 1z" fill="#0077b6" />
+                {/* Faucet handle */}
+                <rect x="10" y="14" width="10" height="2.5" rx="1.25" fill="white" />
+                {/* Faucet spout */}
+                <rect x="13.5" y="16.5" width="3" height="5" rx="1.5" fill="white" />
+                {/* Water drop */}
+                <circle cx="15" cy="23.5" r="1.5" fill="white" />
+              </svg>
+              <span className="font-bold text-base tracking-tight" style={{ color: "#0077b6" }}>
+                Water-Wise
+              </span>
+            </span>
+          ) : (
+            /* Over video: real PNG in glass pill */
+            <span className="flex items-center rounded-lg bg-white/90 backdrop-blur-sm px-2 py-1">
+              <img src="/waterwise_logo1.png" alt="Water-Wise" className="h-8 w-auto" />
+            </span>
+          )}
         </a>
 
         {/* Desktop nav */}

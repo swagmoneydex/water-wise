@@ -83,8 +83,8 @@ export default function Hero() {
 
         <Reveal delay={80}>
           <h1 className="font-bold leading-tight tracking-tight mb-5 text-white" style={{ fontSize: "clamp(40px, 6vw, 78px)" }}>
-            Clean water you can{" "}
-            <span style={{ color: "#48cae4" }}>count on.</span>
+            Know what&apos;s in{" "}
+            <span style={{ color: "#48cae4" }}>your water.</span>
           </h1>
         </Reveal>
 
